@@ -1,5 +1,7 @@
 import noise.Noise;
 
+import java.awt.*;
+
 public class Terrain {
 
     public static float scaleRange(float min, float max, float a, float b, float x) {
@@ -7,8 +9,8 @@ public class Terrain {
     }
 
     public static int terrainOne(Noise noise, int x, int y){
-        float noiseValue = scaleRange(-1, 1, 0, 255, noise.interpolatedNoise(x * .02f, y * .02f));
-        noiseValue += scaleRange(-1, 1, 0, 255,  noise.interpolatedNoise(x * 0.03f, y * 0.03f));
+        float noiseValue = scaleRange(-1, 1, 0, 255, noise.interpolatedNoise(x * .04f, y * .04f));
+        noiseValue += scaleRange(-1, 1, 0, 255,  noise.interpolatedNoise(x * 0.08f, y * 0.08f));
 
         noiseValue /= 2f;
         return Math.round(noiseValue);
@@ -41,9 +43,9 @@ public class Terrain {
             blue = 100;
         }
         else if (height > 115){
-            red = 105;
-            green = 225;
-            blue = 72;
+            red = 50;
+            green = 200;
+            blue = 77;
         }else if (height > 107){
             red = 240;
             green = 240;

@@ -22,7 +22,7 @@ public class Main {
     }
 
     public static void main(String[] args){
-        int length = 1000;
+        int length = 750;
 
         Random r = new Random();
 
